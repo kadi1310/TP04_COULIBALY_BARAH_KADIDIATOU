@@ -15,7 +15,7 @@
     </head>
     <body>
         <!-- Zone qui affiche les utilisateurs si le paramètre action vaut listerComptes -->
-        <c:if test="${param['action'] == 'listeAccount'}" >
+        <div> <c:if test="${param['action'] == 'listeAccount'}" >
             <h2>Liste des Comptes Bancaire</h2>
 
             <table border="10">
@@ -46,7 +46,7 @@
                 <tr><td><b>TOTAL</b></td><td></td><td><b>${total}</b></td><td></td></tr>
             </table>
 
-        </c:if>
-            <input type="submit" value="Retour" name="submit"/>
+        </c:if></div>
+           
     </body>
 </html>

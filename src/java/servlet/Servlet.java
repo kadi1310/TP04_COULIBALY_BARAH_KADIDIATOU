@@ -69,6 +69,7 @@ public class Servlet extends HttpServlet {
                 forwardTo = "listAccount.jsp?action=listeAccount";
                 message = "Liste des compte bancaire";
             }
+            
             else{
                 forwardTo = "index.jsp?action=todo";
                 message = "La fonctionnalité pour les paramètre" + action + "est à implémenter !";
