@@ -5,7 +5,7 @@
  */
 package compte.gestionnaireDeCompte;
 
-import compte.modeles.compteBancaire;
+import compte.modeles.CompteBancaire;
 import java.util.Collection;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -21,24 +21,29 @@ public class GestionCompteBancaire {
     @PersistenceContext(unitName = "TP04_COULIBALY_BARAH_KADIDIATOUPU")
     private EntityManager em;
 
-    public void persist(Object object) {
-        em.persist(object);
-    }
-    public void creerUtilisateursDeTest(){
+   
+    public void creerCompteBancaireDeTest(){
         creerCompteBancaire("coulibaly","barah","cb",21.0);
         creerCompteBancaire("yeo","arielle","ya",22.0);
         creerCompteBancaire("yao","grace","yg",23.0);
         creerCompteBancaire("N'guetta","emmanuel","ne",24.0);
     }
     
-     public compteBancaire creerCompteBancaire(String nom, String prenom,String numeroC,Double balance){
-        compteBancaire u = new compteBancaire(nom, prenom, numeroC,balance);
+     public CompteBancaire creerCompteBancaire(String nom, String prenom,String numeroC,double balance){
+        CompteBancaire u = new CompteBancaire(nom, prenom, numeroC,balance);
         em.persist(u);
         return u;
     }
+     
    
-     public Collection<compteBancaire> getAllUsers(){
-        Query q = em.createQuery("select u from compteBancaire u");
+     public Collection<CompteBancaire> getAllCompte(){
+        Query q = em.createQuery("select u from CompteBancaire u");
         return q.getResultList();
+    }
+     
+     
+     
+      public void persist(Object object) {
+        em.persist(object);
     }
 }

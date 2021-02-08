@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="TP04_COULIBALY_BARAH_KADIDIATOU" default="default" basedir=".">
-    <description>Builds, tests, and runs the project TP04_COULIBALY_BARAH_KADIDIATOU.</description>
+<project name="TP04_COULIBALY_BARAH_KADIDIATOU1" default="default" basedir=".">
+    <description>Builds, tests, and runs the project TP04_COULIBALY_BARAH_KADIDIATOU1.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 

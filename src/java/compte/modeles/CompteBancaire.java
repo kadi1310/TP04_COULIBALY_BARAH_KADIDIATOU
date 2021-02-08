@@ -16,7 +16,7 @@ import javax.persistence.Id;
  * @author coulibaly barah
  */
 @Entity
-public class compteBancaire implements Serializable {
+public class CompteBancaire implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,10 +26,10 @@ public class compteBancaire implements Serializable {
     private String accountNumber;
     private Double balance;
     
-    public compteBancaire(){
+    public CompteBancaire(){
         
     }
-    public compteBancaire(final String firstName,final String lastName,final String accountNumber, final Double balance){
+    public CompteBancaire(final String firstName,final String lastName,final String accountNumber, final double balance){
         this.firstName = firstName;
         this.lastName = lastName;
         this.accountNumber = accountNumber;
@@ -88,10 +88,10 @@ public class compteBancaire implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof compteBancaire)) {
+        if (!(object instanceof CompteBancaire)) {
             return false;
         }
-        compteBancaire other = (compteBancaire) object;
+        CompteBancaire other = (CompteBancaire) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
